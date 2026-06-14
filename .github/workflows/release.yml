@@ -19,7 +19,7 @@ jobs:
       - name: Build
         run: uv build
       - name: Smoke test (wheel)
-        run: uv run --isolated --no-project --with dist/*.whl python -c "from tds_hello_kasim import greet; print(greet('ci'))"
+        run: uv run --isolated --no-project --with dist/*.whl python -c "from tds_hello_kasim import greet, shout; print(greet('ci')); print(shout('ci'))"
       - name: Upload dist/
         uses: actions/upload-artifact@v4
         with:

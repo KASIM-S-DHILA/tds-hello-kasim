@@ -10,3 +10,7 @@ def greet(name: str = "world") -> str:
     if not isinstance(name, str):
         raise TypeError("name must be a str")
     return f"Hello, {name}! — from tds-hello v{__version__}"
+
+
+def shout(name: str = "world") -> str:
+    return greet(name).upper()

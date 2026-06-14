@@ -1,6 +1,6 @@
 [project]
 name = "tds-hello-kasim"
-version = "0.1.1"
+version = "0.2.0"
 description = "A tiny greeter library from TDS 2026 at IIT Madras."
 readme = "README.md"
 license = "MIT"
