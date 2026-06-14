@@ -24,7 +24,7 @@ jobs:
         run: uv build
 
       - name: Smoke test (wheel)
-        run: uv run --isolated --no-project --with dist/*.whl python -c "from tds_hello_YOURNAME import greet; print(greet('ci'))"
+        run: uv run --isolated --no-project --with dist/*.whl python -c "from tds_hello_kasim import greet; print(greet('ci'))"
 
       - name: Upload dist/
         uses: actions/upload-artifact@v4
@@ -38,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: testpypi
-      url: https://test.pypi.org/project/tds-hello-YOURNAME/
+      url: https://test.pypi.org/project/tds-hello-kasim/
     permissions:
       id-token: write
     steps:
@@ -62,7 +62,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/project/tds-hello-YOURNAME/
+      url: https://pypi.org/project/tds-hello-kasim/
     permissions:
       id-token: write
     steps:
